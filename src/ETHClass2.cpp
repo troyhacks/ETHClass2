@@ -628,10 +628,10 @@ bool ETHClass2::beginSPI(eth_phy_type_t type, uint8_t phy_addr, int cs, int irq,
 
     return true;
 
-err:
-    log_e("Failed to set all pins bus to ETHERNET");
-    ETHClass2::ethDetachBus((void *)(this));
-    return false;
+// err:
+//     log_e("Failed to set all pins bus to ETHERNET");
+//     ETHClass2::ethDetachBus((void *)(this));
+//     return false;
 }
 
 #if ETH_SPI_SUPPORTS_CUSTOM
