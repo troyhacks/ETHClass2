@@ -1040,7 +1040,7 @@ void ETHClass2::printInfo(Print &out)
     out.print("      ");
     out.print("ether ");
     out.print(macAddress());
-    out.printf(" phy 0x%lX", phyAddr());
+    out.printf(" phy 0x%uX", phyAddr());
     out.println();
 
     out.print("      ");
