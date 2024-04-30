@@ -547,6 +547,10 @@ bool ETHClass2::beginSPI(eth_phy_type_t type, uint8_t phy_addr, int cs, int irq,
     base_mac_addr[ETH_ADDR_LEN - 1] += _eth_index+1; // Increment by the ETH number, and we start at 0 so add 1 more
     esp_derive_local_mac(mac_addr, base_mac_addr);
     log_e("_eth_index is: %d", _eth_index);
+    // 74-56-3C-xx-xx-xx example ReakTek card
+    base_mac_addr[0] = 0x74;
+    base_mac_addr[1] = 0x56;
+    base_mac_addr[2] = 0x3C;
     ret = esp_eth_ioctl(_eth_handle, ETH_CMD_S_MAC_ADDR, base_mac_addr);
     if (ret != ESP_OK) {
         log_e("SPI Ethernet MAC address config failed: %d", ret);
