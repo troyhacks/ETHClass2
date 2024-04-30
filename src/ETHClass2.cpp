@@ -547,7 +547,7 @@ bool ETHClass2::beginSPI(eth_phy_type_t type, uint8_t phy_addr, int cs, int irq,
     base_mac_addr[ETH_ADDR_LEN - 1] += _eth_index+1; // Increment by the ETH number, and we start at 0 so add 1 more
     esp_derive_local_mac(mac_addr, base_mac_addr);
     log_e("_eth_index is: %d", _eth_index);
-    ret = esp_eth_ioctl(_eth_handle, ETH_CMD_S_MAC_ADDR, base_mac_addr);
+    ret = esp_eth_ioctl(_eth_handle, ETH_CMD_S_MAC_ADDR, mac_addr);
     if (ret != ESP_OK) {
         log_e("SPI Ethernet MAC address config failed: %d", ret);
         return false;
