@@ -18,8 +18,6 @@
  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-#ifdef CONFIG_ETH_SPI_ETHERNET_W5500
-
 #ifndef _ETH_H_
 #define _ETH_H_
 
@@ -219,4 +217,3 @@ class ETHClass2 {
 extern ETHClass2 ETH2;
 
 #endif /* _ETH_H_ */
-#endif // CONFIG_ETH_SPI_ETHERNET_W5500
