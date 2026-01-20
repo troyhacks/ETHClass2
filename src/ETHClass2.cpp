@@ -18,7 +18,6 @@
  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
-#ifdef CONFIG_ETH_SPI_ETHERNET_W5500
 // Disable the automatic pin remapping of the API calls in this file
 #define ARDUINO_CORE_BUILD
 
@@ -1074,4 +1073,3 @@ void ETHClass2::printInfo(Print &out)
 }
 
 ETHClass2 ETH2;
-#endif // CONFIG_ETH_SPI_ETHERNET_W5500
