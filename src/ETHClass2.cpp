@@ -23,7 +23,7 @@
 
 #include "esp_idf_version.h"
 
-#if ESP_IDF_VERSION <= ESP_IDF_VERSION_VAL(4, 0, 0)
+#if ESP_IDF_VERSION >= ESP_IDF_VERSION_VAL(4, 0, 0)
 
 #include "ETHClass2.h"
 #include "esp_system.h"
