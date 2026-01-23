@@ -21,6 +21,10 @@
 // Disable the automatic pin remapping of the API calls in this file
 #define ARDUINO_CORE_BUILD
 
+#include "esp_idf_version.h"
+
+#if ESP_IDF_VERSION <= ESP_IDF_VERSION_VAL(4, 0, 0)
+
 #include "ETHClass2.h"
 #include "esp_system.h"
 #include "esp_event.h"
@@ -1073,3 +1077,5 @@ void ETHClass2::printInfo(Print &out)
 }
 
 ETHClass2 ETH2;
+
+#endif // IDF v4 only
