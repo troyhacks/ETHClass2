@@ -23,8 +23,8 @@
 
 #include "esp_idf_version.h"
 
-// This seeems to be the minimim. It compiled with less wih a workaround for
-// digitalPinToGPIONumber() which is often just a #define to pass thw number
+// This seeems to be the minimim. It compiles wwih a workaround for
+// digitalPinToGPIONumber() which is often just a #define to pass the number
 // unchanged, but there's "someething else" that makes it not work below 4.4.5
 //
 #if ESP_IDF_VERSION >= ESP_IDF_VERSION_VAL(4, 4, 5)
