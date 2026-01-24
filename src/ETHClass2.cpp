@@ -494,7 +494,7 @@ bool ETHClass2::beginSPI(eth_phy_type_t type, uint8_t phy_addr, int cs, int irq,
             mac_config.custom_spi_driver.write = _eth_spi_write;
         }
 #endif
-        mac = esp_eth_mac_new_w5500(&mac_config, &);
+        mac = esp_eth_mac_new_w5500(&mac_config, &eth_mac_config);
         phy = esp_eth_phy_new_w5500(&phy_config);
     } else
 #endif
