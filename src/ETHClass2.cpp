@@ -438,9 +438,9 @@ bool ETHClass2::beginSPI(eth_phy_type_t type, uint8_t phy_addr, int cs, int irq,
         return false;
     }
 
-    // Init common MAC and PHY configs to default
-    eth_mac_config_t eth_mac_config = ETH_MAC_DEFAULT_CONFIG();
-    eth_phy_config_t phy_config = ETH_PHY_DEFAULT_CONFIG();
+    // Init common MAC and PHY configs to default - unused
+    // eth_mac_config_t eth_mac_config = ETH_MAC_DEFAULT_CONFIG();
+    // eth_phy_config_t phy_config = ETH_PHY_DEFAULT_CONFIG();
 
     // Update PHY config based on board specific configuration
     phy_config.phy_addr = phy_addr;
