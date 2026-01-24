@@ -438,9 +438,9 @@ bool ETHClass2::beginSPI(eth_phy_type_t type, uint8_t phy_addr, int cs, int irq,
         return false;
     }
 
-    // Init common MAC and PHY configs to default - unused
-    // eth_mac_config_t eth_mac_config = ETH_MAC_DEFAULT_CONFIG();
-    // eth_phy_config_t phy_config = ETH_PHY_DEFAULT_CONFIG();
+    // Init common MAC and PHY configs to default
+    eth_mac_config_t eth_mac_config = ETH_MAC_DEFAULT_CONFIG();
+    eth_phy_config_t phy_config = ETH_PHY_DEFAULT_CONFIG();
 
     // Update PHY config based on board specific configuration
     phy_config.phy_addr = phy_addr;
@@ -494,7 +494,7 @@ bool ETHClass2::beginSPI(eth_phy_type_t type, uint8_t phy_addr, int cs, int irq,
             mac_config.custom_spi_driver.write = _eth_spi_write;
         }
 #endif
-        mac = esp_eth_mac_new_w5500(&mac_config, &eth_mac_config);
+        mac = esp_eth_mac_new_w5500(&mac_config, &);
         phy = esp_eth_phy_new_w5500(&phy_config);
     } else
 #endif
@@ -511,7 +511,7 @@ bool ETHClass2::beginSPI(eth_phy_type_t type, uint8_t phy_addr, int cs, int irq,
                 mac_config.custom_spi_driver.write = _eth_spi_write;
             }
 #endif
-            mac = esp_eth_mac_new_dm9051(&mac_config, &eth_mac_config);
+            mac = esp_eth_mac_new_dm9051(&mac_config, &);
             phy = esp_eth_phy_new_dm9051(&phy_config);
         } else
 #endif
@@ -528,7 +528,7 @@ bool ETHClass2::beginSPI(eth_phy_type_t type, uint8_t phy_addr, int cs, int irq,
                     mac_config.custom_spi_driver.write = _eth_spi_write;
                 }
 #endif
-                mac = esp_eth_mac_new_ksz8851snl(&mac_config, &eth_mac_config);
+                mac = esp_eth_mac_new_ksz8851snl(&mac_config, &);
                 phy = esp_eth_phy_new_ksz8851snl(&phy_config);
             } else
 #endif
