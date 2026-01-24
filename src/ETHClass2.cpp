@@ -139,8 +139,8 @@ bool ETHClass2::begin(eth_phy_type_t type, uint8_t phy_addr, int mdc, int mdio, 
     //     if(!perimanClearPinBus(_pin_power)){ return false; }
     // }
 
-    eth_mac_config_t eth_mac_config = ETH_MAC_DEFAULT_CONFIG();
-    eth_mac_config.sw_reset_timeout_ms = 1000;
+    // eth_mac_config_t eth_mac_config = ETH_MAC_DEFAULT_CONFIG();
+    // eth_mac_config.sw_reset_timeout_ms = 1000;
 
     esp_eth_mac_t *mac = esp_eth_mac_new_esp32(&mac_config);
     if (mac == NULL) {
