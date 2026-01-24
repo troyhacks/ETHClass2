@@ -21,12 +21,6 @@
 #ifndef _ETH_H_
 #define _ETH_H_
 
-#include "esp_idf_version.h"
-
-#if ESP_IDF_VERSION <= ESP_IDF_VERSION_VAL(4, 4, 4)
- #define digitalPinToGPIONumber(p) (p)
-#endif
-
 //
 // Example configurations for pins_arduino.h to allow starting with ETH.begin();
 //
