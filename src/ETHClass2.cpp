@@ -255,10 +255,10 @@ bool ETHClass2::begin(eth_phy_type_t type, uint8_t phy_addr, int mdc, int mdio, 
 
     return true;
 
-err:
-    log_e("Failed to set all pins bus to ETHERNET");
-    ETHClass2::ethDetachBus((void *)(this));
-    return false;
+// err:
+//     log_e("Failed to set all pins bus to ETHERNET");
+//     ETHClass2::ethDetachBus((void *)(this));
+//     return false;
 }
 #endif /* CONFIG_ETH_USE_ESP32_EMAC */
 
